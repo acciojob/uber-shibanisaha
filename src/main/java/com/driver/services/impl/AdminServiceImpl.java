@@ -61,7 +61,7 @@ public class AdminServiceImpl implements AdminService {
 			driverEntity.setTripBookingList(driver.getTripBookingList());
 			Cab cab = new Cab();
 			cab.setId(driver.getCab().getId());
-			cab.setAvailable(driver.getCab().isAvailable());
+			cab.setAvailable(driver.getCab().getAvailable());
 			cab.setPerKmRate(driver.getCab().getPerKmRate());
 			driverEntity.setCab(cab);
 			drivers.add(driverEntity);

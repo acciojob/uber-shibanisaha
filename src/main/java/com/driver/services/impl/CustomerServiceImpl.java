@@ -54,7 +54,7 @@ public class CustomerServiceImpl implements CustomerService {
 
 		for(Driver d: drivers){
 			Cab cab = d.getCab();
-			if(cab.isAvailable()==true){
+			if(cab.getAvailable()==true){
 				trip.setDriver(d);
 				trip.setStatus(TripStatus.CONFIRMED);
 				trip.setBill(10*distanceInKm);
