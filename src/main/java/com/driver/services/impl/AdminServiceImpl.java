@@ -54,17 +54,18 @@ public class AdminServiceImpl implements AdminService {
 		//Find the list of all drivers
 		List<Driver> drivers = new ArrayList<>();
 		driverRepository1.findAll().forEach(driver -> {
-			Driver driverEntity = new Driver();
-			driverEntity.setDriverId(driver.getDriverId());
-			driverEntity.setPassword(driver.getPassword());
-			driverEntity.setMobile(driver.getMobile());
-			driverEntity.setTripBookingList(driver.getTripBookingList());
-			Cab cab = new Cab();
-			cab.setId(driver.getCab().getId());
-			cab.setAvailable(driver.getCab().getAvailable());
-			cab.setPerKmRate(driver.getCab().getPerKmRate());
-			driverEntity.setCab(cab);
-			drivers.add(driverEntity);
+//			Driver driverEntity = new Driver();
+//			driverEntity.setDriverId(driver.getDriverId());
+//			driverEntity.setPassword(driver.getPassword());
+//			driverEntity.setMobile(driver.getMobile());
+//			driverEntity.setTripBookingList(driver.getTripBookingList());
+//			Cab cab = new Cab();
+//			cab.setId(driver.getCab().getId());
+//			cab.setAvailable(driver.getCab().getAvailable());
+//			cab.setPerKmRate(driver.getCab().getPerKmRate());
+//			driverEntity.setCab(cab);
+//			drivers.add(driverEntity);
+			drivers.add(driver);
 		});
 		return drivers;
 	}
