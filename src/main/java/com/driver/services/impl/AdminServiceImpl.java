@@ -52,30 +52,13 @@ public class AdminServiceImpl implements AdminService {
 	@Override
 	public List<Driver> getListOfDrivers() {
 		//Find the list of all drivers
-		List<Driver> drivers = new ArrayList<>();
-		driverRepository1.findAll().forEach(driver -> {
-//			Driver driverEntity = new Driver();
-//			driverEntity.setDriverId(driver.getDriverId());
-//			driverEntity.setPassword(driver.getPassword());
-//			driverEntity.setMobile(driver.getMobile());
-//			driverEntity.setTripBookingList(driver.getTripBookingList());
-//			Cab cab = new Cab();
-//			cab.setId(driver.getCab().getId());
-//			cab.setAvailable(driver.getCab().getAvailable());
-//			cab.setPerKmRate(driver.getCab().getPerKmRate());
-//			driverEntity.setCab(cab);
-//			drivers.add(driverEntity);
-			drivers.add(driver);
-		});
-		return drivers;
+		return driverRepository1.findAll();
 	}
 
 	@Override
 	public List<Customer> getListOfCustomers() {
 		//Find the list of all customers
-		List<Customer> customers = new ArrayList<>();
-		customerRepository1.findAll().forEach(customer -> customers.add(customer));
-		return customers;
+		return customerRepository1.findAll();
 	}
 
 }
